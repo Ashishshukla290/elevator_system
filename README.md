@@ -54,7 +54,7 @@ File Structure
 Usage
 
     Create new elevator system
-        Endpoint: /elevator-systems/
+        Endpoint: /elevator-system/
         Method : POST
         Request body:
 
@@ -65,13 +65,13 @@ Usage
 
 Get elevator system info
 
-    Endpoint: /elevator-systems/<system-id>
+    Endpoint: /elevator-system/<system-id>
     Method: GET
     Lists all the elevators in the system and their current status
 
 Create elevator request
 
-    Endpoint: /elevator-systems/<system-id>/request/
+    Endpoint: /elevator-system/<system-id>/request/
     Method : POST
     Request body:
 ```
@@ -82,25 +82,25 @@ Create elevator request
 ```
 Get elevator request data
 
-    Endpoint: /elevator-systems/<system-id>/<elevator-id>/request-data/
+    Endpoint: /elevator-system/<system-id>/<elevator-id>/request-data/
     Method : GET
     Lists all the requests made to the elevator
 
 Get elevator next destination
 
-    Endpoint: /elevator-systems/<system-id>/<elevator-id>/next/
+    Endpoint: /elevator-system/<system-id>/<elevator-id>/next/
     Method: GET
     Responds with the next_stop of elevator.
     
 Get elevator direction
 
-    Endpoint: /elevator-systems/<system-id>/<elevator-id>/direction/
+    Endpoint: /elevator-system/<system-id>/<elevator-id>/direction/
     Method: GET
     Responds with the direction of elevator.
 
 Open/close elevator door 
 
-    Endpoint: /elevator-systems/<system-id>/<elevator-id>/1 or 0/door/
+    Endpoint: /elevator-system/<system-id>/<elevator-id>/1 or 0/door/
     Method: GET
     Responds with the direction of elevator.
     1 is want to open door.
@@ -108,7 +108,7 @@ Open/close elevator door
 
 Change working status of elevator
 
-    Endpoint: /elevator-systems/<system-id>/<elevator-id>/1 or 0/isworking/
+    Endpoint: /elevator-system/<system-id>/<elevator-id>/1 or 0/isworking/
     Method: GET
     Responds with the direction of elevator.
     1 if elevator is working.
