@@ -10,7 +10,7 @@ from .serializer import ElevatorSerializer,ElevatorSystemSerializer,RequestSeria
 class ElevatorSystemViewset(viewsets.ModelViewSet):
     queryset = ElevatorSystem.objects.all()
     serializer_class = ElevatorSystemSerializer
-    @action(detail = False, methods = ['GET'])
+    @action(detail = True, methods = ['GET'])
     def by_system_name(self,request,system_id):
         '''get detail of all elevator of a system'''
         try:
@@ -19,7 +19,7 @@ class ElevatorSystemViewset(viewsets.ModelViewSet):
             return Response(serial.data)
         except ElevatorSystem.DoesNotExist:
             return Response({'error':'system does not exist','status':403})
-    @action(detail = False,methods=['POST'])
+    @action(detail = True,methods=['POST'])
     def request(self,request,system_id):
         '''request for elevator'''
         try:
